@@ -1,0 +1,58 @@
+@import "../abstracts/variables";
+.composition {
+  position: relative;
+
+  &__photo {
+    width: 40%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 2px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    position: absolute;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    border-radius: 0;
+    &--p1 {
+      left: 20%;
+      top: -2rem;
+    }
+    &--p2 {
+      right: 10%;
+      top: -0, 5rem;
+    }
+    &--p3 {
+      left: 35%;
+      top: 10rem;
+    }
+    &:hover {
+      outline: 1.5rem solid $color-primary;
+      transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      -o-transform: scale(1.05);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      z-index: 20;
+      /*padding: 1rem;
+      border-radius: 0;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+      */
+      padding: 1rem;
+    }
+  }
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95) translateY(-0.5rem);
+    -webkit-transform: scale(0.95) translateY(-0.5rem);
+    -moz-transform: scale(0.95) translateY(-0.5rem);
+    -ms-transform: scale(0.95) translateY(-0.5rem);
+    -o-transform: scale(0.95) translateY(-0.5rem);
+  }
+}
